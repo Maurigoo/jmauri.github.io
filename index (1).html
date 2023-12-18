@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIVIDAD_06</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/cb/d8/d0/cbd8d0aa2e543de7e299134ac8893266.gif');
+        }
+    </style>
+</head>
+<body>
+    <header class="img-container">
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRXvj2V3r1lzYKafgwZKynPOyLPExG6JZ8tn0K-E1SZPYCornFT" width="1000" height="100"/>
+    </header>
+    <form action="procesarPeticion.jsp" method="get">
+        <fieldset style="background-color: #EC7063;">
+            <legend><h2>Informacion del cliente</h2></legend>
+            <label for="nombre">Nombre Completo:</label>
+            <input id="nombre" type="text" name="nombre" placeholder="Ingresa nombre completo" required/>
+        </br>
+        </br>
+            <label for="pass">Contraseña:</label>
+            <input id="password" type="password" name="password" placeholder="Ingresa tu contraseña" required/>
+        </br>
+        </br>
+            <label for="direccion">Dirección de entrega:</label>
+            <input id="direccion" type="text" name="direccion" placeholder="Ingresa la direccion" required/>
+        </br>
+        </br>
+            <label for="numero">Numero de telefono</label>
+            <input id="telefono" type="tel" name="numero" min="9" max="9" placeholder="Ingresa tu telefono" required/>
+        </br>
+        </br>
+            <label for="email">Correo electronico</label>
+            <input id="correo" type="email" name="correo" placeholder="Ingresa tu correo electronico"/> 
+        </br>
+        </br>
+            <label for="edad">Edad</label>
+            <input id="edad" type="number" name="edad" placeholder="Ingresa tu edad" required/>            
+        </fieldset>
+        <fieldset style="background-color: #EC7063;">
+            <legend><h2>Pedido de la pizza</h2></legend>
+            <label for="tamaño">Tamaño de la pizza:</label>
+            <br/>	
+            <input type="radio" name="tamaño" value="P" />Pequeña (8 pulgadas)<br />	
+            <input type="radio" name="tamaño" value="M" />Mediana (12 pulgadas)<br />	
+            <input type="radio" name="tamaño" value="G" />Grande (16 pulgadas)<br />
+            <br/>
+            <label for="tipo">Tipo de masa:</label>
+            <br/>	
+            <input type="radio" name="tipo" value="F" />Masa fina<br />	
+            <input type="radio" name="tipo" value="N" />Masa normal<br />	
+            <input type="radio" name="tipo" value="G" />Masa gruesa<br />
+            <br/>
+            <label for="ingredientes">Seleccione los ingredientes que desea (Puede elegir varios):</label>
+            <br/>	
+            <input type="checkbox" name="ingredientes" value="P" />Pepperoni<br />	
+            <input type="checkbox" name="ingredientes" value="J" />Judias verdes<br />	
+            <input type="checkbox" name="ingredientes" value="JA" />Jamon<br />
+            <input type="checkbox" name="ingredientes" value="A" />Alcaparras<br />	
+            <input type="checkbox" name="ingredientes" value="AC" />Aceitunas<br />	
+            <input type="checkbox" name="ingredientes" value="C" />Cebolla<br />
+            <input type="checkbox" name="ingredientes" value="S" />Salchicha<br />	
+            <input type="checkbox" name="ingredientes" value="PI" />Piña<br />	
+            
+            <br/>
+            <label for="salsa">Elija la salsa que desea:</label>
+            <br/>	
+            <input type="radio" name="salsa" value="T" />Tomate<br/>	
+            <input type="radio" name="salsa" value="B" />Barbacoa<br/>	
+            <input type="radio" name="salsa" value="P" />Pesto<br/>	
+            <input type="radio" name="salsa" value="S/N" />Sin salsa<br/>
+        </fieldset>
+        <fieldset style="background-color: #EC7063;">
+            <legend><h2>Instrucciones especiales</h2></legend>
+            <textarea style="resize: none;" rows="5" cols="80" name="instrucciones" placeholder="Por favor, proporcione cualquier instrucción especial o comentario adicional sobre su pedido"></textarea>
+        </fieldset>
+        <fieldset style="background-color: #EC7063;">
+            <legend><h2>Metodos de pago</h2></legend>
+            <label>Escoge el metodo de pago:</label>
+            <select name="pago" required>
+                <option value="TC" selected>Tarjeta de credito</option>
+                <option value="TC">Tarjeta de debito</option>
+                <option value="TC">Efectivo</option>
+                <option value="TC">PayPal</option>
+            </select>
+        </fieldset>
+        <fieldset style="background-color: #EC7063;">
+            <legend><h2>Enviar pedido</h2></legend>
+            <label for="terminos">Acepta los terminos y usos?</label>
+            <a href="Condiciones.html" target="_blank">Pulsa aqui para ver las condiciones del servicio</a>
+            </br>
+            He leido y acepto los terminos de uso <input type="checkbox" name="terminos" value="terminos" required/>
+            </br>
+            </br>
+            <input type="submit" value="Enviar pedido"/>
+            <input type="reset" value="Limpiar formulario"/>
+        </fieldset>
+    </form>
+</body>
+</html>
